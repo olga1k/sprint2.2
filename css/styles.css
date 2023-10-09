@@ -340,6 +340,16 @@ button {
 button:focus:not(:focus-visible) {
   outline: 0;
 }
+.btnRem {
+  background-color: pink;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border-radius: 5px;
+
+
+}
 
 input,
 button,
