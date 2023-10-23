@@ -105,10 +105,6 @@ function buy(id) {
 
     i++;
   }
-  console.log("the cart")
-  console.log(cart);
-  console.log("The cartList");
-  console.log(cartList);
   countProduct.innerHTML = cartList.length;
   return cart;
 }
@@ -126,11 +122,7 @@ function cleanCart() {
   cartList = [];
   cart = [];
   countProduct.innerHTML = cartList.length;
-  if (cartList.length === -1 && cart.length === -1) {
-
-  //emptyTrolley(); TO DELETE IF NOT USED
-  //.log(cartList, cart);
-}
+  if (cartList.length === -1 && cart.length === -1) 
 
 }
 
