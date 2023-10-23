@@ -105,6 +105,10 @@ function buy(id) {
 
     i++;
   }
+  console.log("the cart")
+  console.log(cart);
+  console.log("The cartList");
+  console.log(cartList);
   countProduct.innerHTML = cartList.length;
   return cart;
 }
@@ -122,22 +126,11 @@ function cleanCart() {
   cartList = [];
   cart = [];
   countProduct.innerHTML = cartList.length;
-  if (cartList.length === -1 && cart.length === -1) 
-
-}
-
-function emptyTrolley() { //TO DELETE IF NOT USED
-  if (cartList.length === -1 || cart.length === -1) {
-    const trolleyInfo = document.querySelector(".table");
-    const btns = document.querySelector(".btns");
-    trolleyInfo.classList.add("invisible");
-    total.classList.add("invisible");
-    btns.classList.add("invisible");
-
   
 
-  }
 }
+
+
 // Exercise 3
 function calculateTotal(cartList) {
   // Calculate total price of the cart using the "cartList" array
