@@ -1,8 +1,9 @@
-//FIX password
+//FIX password DONE
 //FIX lastname
-//edit messages
+//edit messages DONE
 //Fix form
 //fix default
+
 // Exercise 6
 const btnEl = document.querySelector("#btn");
 function validate() {
@@ -25,10 +26,12 @@ function validate() {
   var errorPhone = document.getElementById("errorPhone");
 
   var checkNotLetters = /^[a-zA-z]+$/g;
-  //var checkNotLetters = /\W+\d+/g;
+  //var checkNotLettersDigits = /\W+/g;
 
   var checkNotDigits = /^[0-9]+$/gi;
   var checkDigitsLetters = /^([a-zA-Z]+[0-9]+)+$/;
+  var onlyLetters = /[a-zA-Z]+/;
+  var onlyNumbers = /[0-9]+/;
   var checkEmail = /^[0-9a-zA-z]+@[a-zA-z]+.[a-z]{2,3}$/;
   console.log("checkout");
 
@@ -58,13 +61,14 @@ function validate() {
     fLastN.classList.remove("is-invalid");
     fLastN.classList.add("is-valid");
   }
-  if (fPassword.value.length < 3 || !checkDigitsLetters.test(fPassword.value)) {
+  if (fPassword.value.length < 3 || !onlyLetters.test(fPassword.value) || !onlyNumbers.test(fPassword.value)) {
+    //fPassword.value.length < 3 || !checkDigitsLetters.test(fPassword.value)) {
     fPassword.classList.add("is-invalid");
   } else {
     fPassword.classList.remove("is-invalid");
     fPassword.classList.add("is-valid");
   }
-  if (fPhone.value.length < 9 || !checkNotDigits.test(fPhone.value)) {
+  if (fPhone.value.length !== 9 || !checkNotDigits.test(fPhone.value)) {
     fPhone.classList.add("is-invalid");
   } else {
     fPhone.classList.remove("is-invalid");

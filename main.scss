@@ -1,0 +1,30 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+$base-dark: #132043;
+$base-blue: #1F4172;
+$base-pink: #F1B4BB;
+$base-light: #FDF0F0;
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+#navbar-example2 { /*not working*/
+    background-color: #FDF0F0;
+
+}
+body {
+    background-color: $base-dark;
+    color: $base-dark;
+}
+#header {
+    background-color: $base-dark;
+   /*background-color: pink;*/
+   }
+.btn {
+    color: $base-blue;
+}
+.btn:hover {
+    background-color: $base-pink;
+}
+

@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="main.css">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="50">
@@ -60,7 +61,7 @@
 	</nav>
 
 	<!-- Header-->
-	<header class="bg-dark py-5">
+	<header class="py-5" id="header"> <!--bg-dark-->
 		<div class="container px-4 px-lg-5 my-5">
 			<div class="text-center text-white">
 				<h1 class="display-4 fw-bolder">IT Academy Shop</h1>
@@ -70,15 +71,13 @@
 	</header>
 	<!-- Section-->
 	<section class="pt-5" id="grocery">
-		<button onclick="calculateTotal()">Calculate total</button>
-		<button onclick="applyPromotionsCart()">Calculate discount</button>
 
 		<h2 class="text-center"><i class="fas fa-shopping-basket pe-3"></i>Grocery</h2>
 		<div class="container px-4 px-lg-5 mt-5">
 			<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 				<div class="col mb-5">
 					<div class="card h-100">
-						<img class="card-img-top" src="./images/product.svg" alt="..." />
+						<img class="card-img-top" src="./images/oil.jpg" alt="..." />
 						<div class="card-body p-4">
 							<div class="text-center">
 								<h5 class="fw-bolder">Cooking Oil</h5>
@@ -238,7 +237,7 @@
 			<p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p>
 		</div>
 	</footer>
-
+<!--Modal-->
 	<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -281,7 +280,7 @@
 					<div class="text-center fs-3">
 						Total: $<span id="total_price"></span>
 					</div>
-					<div class="text-center">
+					<div class="text-center btns">
 						<a href="checkout.html" class="btn btn-primary m-3">Checkout</a>
 						<a href="javascript:void(0)" onclick="cleanCart()" class="btn btn-primary m-3">Clean Cart</a>
 					</div>

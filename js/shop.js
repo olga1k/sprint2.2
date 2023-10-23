@@ -115,7 +115,6 @@ function buy(id) {
 
 // Exercise 2
 function cleanCart() {
-  //why for loop doesn't work here
   console.log(cartList);
  
   let i = 0;
@@ -127,9 +126,26 @@ function cleanCart() {
   cartList = [];
   cart = [];
   countProduct.innerHTML = cartList.length;
+  if (cartList.length === -1 && cart.length === -1) {
+
+  //emptyTrolley(); TO DELETE IF NOT USED
+  //.log(cartList, cart);
+}
 
 }
 
+function emptyTrolley() { //TO DELETE IF NOT USED
+  if (cartList.length === -1 || cart.length === -1) {
+    const trolleyInfo = document.querySelector(".table");
+    const btns = document.querySelector(".btns");
+    trolleyInfo.classList.add("invisible");
+    total.classList.add("invisible");
+    btns.classList.add("invisible");
+
+  
+
+  }
+}
 // Exercise 3
 function calculateTotal(cartList) {
   // Calculate total price of the cart using the "cartList" array
@@ -304,11 +320,3 @@ function open_modal(e) {
   cartListEl.innerHTML = "";
   printCart(cart);
 }
-/* TO REMOVE 
-const openModalButton = document.getElementById("openModalButton");
-
-openModalButton.addEventListener("click", function (event) {
-  //event.stopPropagation(); // Prevent event propagation
-  open_modal(event); // Call open_modal function
-});
-*/
