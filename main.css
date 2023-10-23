@@ -11976,24 +11976,19 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-#navbar-example2 { /*not working*/
-  background-color: #FDF0F0;
-}
-
 body {
   background-color: #132043;
   color: #132043;
 }
 
-#header {
-  background-color: #132043;
-  /*background-color: pink;*/
+h1, .h1, h2, .h2 {
+  color: #f1b4bb;
 }
 
 .btn {
-  color: #1F4172;
+  color: #1f4172;
 }
 
 .btn:hover {
-  background-color: #F1B4BB;
+  background-color: #f1b4bb;
 }/*# sourceMappingURL=main.css.map */
